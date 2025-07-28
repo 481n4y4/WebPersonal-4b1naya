@@ -1,5 +1,5 @@
 :root {
-  --primary: #b6895b;
+  --primary: #5535ac;
   --background: #010101;
 }
 
@@ -26,7 +26,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #896745;
+  border-bottom: 1px solid var(--primary);
   position: fixed;
   top: 0;
   left: 0;
@@ -87,7 +87,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/WhatsApp\ Image\ 2023-12-22\ at\ 09.11.06_0f8b41de.jpg");
+  background-image: url("../img/Lake.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -107,9 +107,14 @@ body {
   );
 }
 
+#home {
+  display: flex;
+  justify-content: center;
+}
+
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  text-align: center;
 }
 
 .hero .content h1 {
@@ -138,12 +143,19 @@ body {
 .Sosmed h2,
 .Creation h2 {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 3rem;
   margin-bottom: 3rem;
+}
+
+.About,
+.Sosmed,
+.Creation {
+  min-height: 100vh;
 }
 
 .About .row {
   display: flex;
+  align-items: center;
 }
 
 .About .row .About-img {
@@ -168,8 +180,8 @@ body {
 
 .About .row .content p {
   margin-bottom: 0.8rem;
-  font-size: 1.4rem;
-  font-weight: 150;
+  font-size: 1.7rem;
+  font-weight: 300;
   line-height: 1;
   padding-left: 2rem;
 }
@@ -223,7 +235,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #b6895b;
+  background-color: var(--primary);
   text-align: center;
   padding: 1rem 0;
   margin-top: 3rem;
@@ -286,9 +298,18 @@ body {
   }
 
   .About .row {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 
+  .About-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .About .row .content h3 {
     margin-top: 1rem;
     font-size: 2rem;
