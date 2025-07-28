@@ -1,6 +1,8 @@
 :root {
-  --primary: #5535ac;
-  --background: #010101;
+  --primary: #656d4a;
+  --background: rgb(33, 15, 4);
+  --background2: #1e2116;
+  --navbar: #414833;
 }
 
 * {
@@ -87,11 +89,12 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/Lake.jpg");
+  background-image: url("../img/adrian.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 0;
 }
 
 .hero::after {
@@ -101,10 +104,12 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    0deg,
-    rgba(1, 1, 3, 1) 3%,
-    rgba(225, 225, 225, 0) 25%
+    to bottom,
+    rgba(0, 0, 0, 0) 60%,
+    /* transparan di atas */ rgb(33, 15, 4) 100%
+      /* coklat tua di bawah (warna background) */
   );
+  z-index: 1;
 }
 
 #home {
@@ -135,22 +140,22 @@ body {
 /* About Me Section */
 .About,
 .Sosmed,
-.Creation {
+.Creation,
+.ability {
   padding: 8rem 7% 1.4rem;
+  min-height: 100vh;
+  margin: 3rem 4rem;
+  background-color: var(--background2);
+  border-radius: 3rem;
 }
 
 .About h2,
 .Sosmed h2,
-.Creation h2 {
+.Creation h2,
+.ability h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
-}
-
-.About,
-.Sosmed,
-.Creation {
-  min-height: 100vh;
 }
 
 .About .row {
@@ -173,7 +178,7 @@ body {
 }
 
 .About .row .content h3 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   padding-left: 2rem;
 }
@@ -187,10 +192,68 @@ body {
 }
 
 /* Sosmed Section */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #a363aa;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-inputs:focus {
+  border: 2px solid #ff994f;
+}
+.contact-container::placeholder {
+  color: #a9a9a9;
+}
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  color: #fff;
+  gap: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+.contact-left button img {
+  height: 15px;
+}
+.contact-right img {
+  width: 500px;
+}
 
 .Sosmed .row {
   margin-top: 1.5rem;
-  background-color: #222;
   padding: 1.5rem 2rem;
   border-radius: 2rem;
   display: flex;
@@ -272,7 +335,7 @@ body {
     position: absolute;
     top: 100%;
     right: -100%;
-    background-color: #fff;
+    background-color: var(--background);
     width: 30rem;
     height: 100vh;
   }
@@ -282,7 +345,7 @@ body {
   }
 
   .navbar .navbar-nav a {
-    color: var(--background);
+    color: #fff;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
