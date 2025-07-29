@@ -192,10 +192,15 @@ body {
 }
 
 /* Sosmed Section */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .contact-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 20px;
 }
 .contact-left-title h2 {
@@ -251,6 +256,14 @@ body {
 .contact-right img {
   width: 500px;
 }
+@media (max-width: 800px) {
+  .contact-inputs {
+    width: 70vw;
+  }
+  .contact-right {
+    display: none;
+  }
+}
 
 .Sosmed .row {
   margin-top: 1.5rem;
@@ -277,6 +290,12 @@ body {
 
 .Sosmed a {
   color: lightblue;
+}
+
+.Sosmed-card i {
+  font-size: 40px; /* Atur ukuran icon */
+  color: #add8e6; /* Warna biru muda */
+  margin-bottom: 0.5rem;
 }
 
 /* Creation Section */
